@@ -19,9 +19,9 @@ namespace Tarea1_David_Andino
 
         private void verificarButton_Click(object sender, EventArgs e)
         {
-            //Imprimiendo mensaje en pantalla para el usuario
+            //Imprimiendo mensaje en pantalla para el usuario con los messageBox a través de la llamada de las funciones creadas
             MessageBox.Show(parOImpar(Convert.ToInt32(numeroTextBox.Text)));//imprimiendo verificacion de numeros pares o impares
-            MessageBox.Show(positivoNegativo(Convert.ToInt32(numeroTextBox.Text)));//imprimiendo verificacion de numeros positivos o negativos
+            MessageBox.Show(positivoNegativo(Convert.ToInt32(numeroTextBox.Text)), "Resolución", MessageBoxButtons.OK, MessageBoxIcon.Information);//imprimiendo verificacion de numeros positivos o negativos
         }
         //Funciones creadas 
         private string parOImpar(int numero)
