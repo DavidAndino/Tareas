@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.numeroTextBox = new System.Windows.Forms.TextBox();
             this.verificarButton = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -39,9 +42,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(53, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 19);
+            this.label2.Size = new System.Drawing.Size(189, 19);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Número";
+            this.label2.Text = "Ingrese un Número:";
             // 
             // label1
             // 
@@ -54,20 +57,24 @@
             // 
             // numeroTextBox
             // 
-            this.numeroTextBox.Location = new System.Drawing.Point(141, 73);
+            this.numeroTextBox.Location = new System.Drawing.Point(238, 73);
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.Size = new System.Drawing.Size(59, 26);
             this.numeroTextBox.TabIndex = 3;
             // 
             // verificarButton
             // 
-            this.verificarButton.Location = new System.Drawing.Point(141, 121);
+            this.verificarButton.Location = new System.Drawing.Point(238, 123);
             this.verificarButton.Name = "verificarButton";
             this.verificarButton.Size = new System.Drawing.Size(107, 36);
             this.verificarButton.TabIndex = 4;
             this.verificarButton.Text = "Verificar";
             this.verificarButton.UseVisualStyleBackColor = true;
             this.verificarButton.Click += new System.EventHandler(this.verificarButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
@@ -82,6 +89,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,6 +101,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox numeroTextBox;
         private System.Windows.Forms.Button verificarButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

@@ -19,8 +19,14 @@ namespace Tarea1_David_Andino
 
         private void verificarButton_Click(object sender, EventArgs e)
         {
+            //Validando que no haya entradas vacias
+            if (numeroTextBox.Text == "")
+            {
+                errorProvider1.SetError(numeroTextBox, "No ingresó algún número aún");//mostrando mensaje para que el usuario se de cuenta de su error
+                return;
+            }
             //Imprimiendo mensaje en pantalla para el usuario con los MessageBox a través de la llamada de las funciones creadas
-            MessageBox.Show(parOImpar(Convert.ToInt32(numeroTextBox.Text))+ positivoNegativo(Convert.ToInt32(numeroTextBox.Text)));//imprimiendo verificacion de numeros pares o impares y positivos o negativos
+            MessageBox.Show(parOImpar(Convert.ToInt32(numeroTextBox.Text))+ positivoNegativo(Convert.ToInt32(numeroTextBox.Text)), "Resolución", MessageBoxButtons.OK, MessageBoxIcon.Information);//imprimiendo verificacion de numeros pares o impares y positivos o negativos
             
         }
         //Funciones creadas 
