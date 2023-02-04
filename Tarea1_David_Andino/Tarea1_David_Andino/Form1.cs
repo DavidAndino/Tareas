@@ -19,9 +19,9 @@ namespace Tarea1_David_Andino
 
         private void verificarButton_Click(object sender, EventArgs e)
         {
-            //Imprimiendo mensaje en pantalla para el usuario con los messageBox a través de la llamada de las funciones creadas
-            MessageBox.Show(parOImpar(Convert.ToInt32(numeroTextBox.Text)));//imprimiendo verificacion de numeros pares o impares
-            MessageBox.Show(positivoNegativo(Convert.ToInt32(numeroTextBox.Text)), "Resolución", MessageBoxButtons.OK, MessageBoxIcon.Information);//imprimiendo verificacion de numeros positivos o negativos
+            //Imprimiendo mensaje en pantalla para el usuario con los MessageBox a través de la llamada de las funciones creadas
+            MessageBox.Show(parOImpar(Convert.ToInt32(numeroTextBox.Text))+ positivoNegativo(Convert.ToInt32(numeroTextBox.Text)));//imprimiendo verificacion de numeros pares o impares y positivos o negativos
+            
         }
         //Funciones creadas 
         private string parOImpar(int numero)
@@ -48,15 +48,15 @@ namespace Tarea1_David_Andino
             //Iniciando condicion anidada
             if (numero == 0)
             {
-                tipoNumero = "El cero es un número neutro";
+                tipoNumero = ". El cero es un número neutro";
             }
             else if (numero > 0)
             {
-                tipoNumero = "y es positivo";
+                tipoNumero = " y es positivo";
             }
             else
             {
-                tipoNumero = "y es negativo";
+                tipoNumero = " y es negativo";
             }
             return tipoNumero;
         }
